@@ -34,7 +34,7 @@ namespace delegates_and_events_tutorial
             set
             {
                 base[index] = value;
-                OnChanged Changed(EventArgs.Empty);
+                OnChanged(EventArgs.Empty);
             }
         }
     }

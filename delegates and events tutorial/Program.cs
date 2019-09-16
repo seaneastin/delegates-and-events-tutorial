@@ -20,6 +20,8 @@ namespace delegates_and_events_tutorial
             list.Add("world");
             list.Clear();
             listener.Detatch();
+
+            Console.ReadKey();
         }
     }
 }

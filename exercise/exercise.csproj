@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AF46F9B2-6C1B-4CC8-A75F-EB2A420A5F19}</ProjectGuid>
+    <ProjectGuid>{AC809799-3422-4065-8B37-30CB6C38CB89}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>delegates_and_events_tutorial</RootNamespace>
-    <AssemblyName>delegates and events tutorial</AssemblyName>
+    <RootNamespace>exercise</RootNamespace>
+    <AssemblyName>exercise</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,14 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArrayList.cs" />
-    <Compile Include="EventListener.cs" />
-    <Compile Include="ListWithChangedEvent.cs" />
+    <Compile Include="keyboard.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
