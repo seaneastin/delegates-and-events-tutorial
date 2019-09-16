@@ -10,6 +10,16 @@ namespace delegates_and_events_tutorial
     {
         static void Main(string[] args)
         {
+            //create a new list
+            ListWithChangedEvent list = new ListWithChangedEvent();
+
+            //create a class that listens for when the lsit is changed
+            EventListener listener = new EventListener(list);
+
+            list.Add("hello");
+            list.Add("world");
+            list.Clear();
+            listener.Detatch();
         }
     }
 }
