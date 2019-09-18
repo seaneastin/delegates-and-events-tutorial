@@ -14,6 +14,8 @@ namespace delegates_and_events_tutorial
         {
             List = list;
             List.Changed += new ChangeEventHandler(OnListChanged);
+
+            list.fizz += new FizzBuzzEventHandler(OnFizzFound);
         }
         private void OnListChanged(object sender, EventArgs e)
         {
@@ -24,5 +26,22 @@ namespace delegates_and_events_tutorial
             List.Changed -= new ChangeEventHandler(OnListChanged);
             List = null;
         }
+        private void OnFizzFound(object sender, EventArgs e)
+        {
+            Console.WriteLine(" Fizz");
+        }
+        private void OnBuzzFound(object sender, EventArgs e)
+        {
+            Console.WriteLine(" Buzz");
+        }
+        private void OnFizzBuzzFound(object sender, EventArgs e)
+        {
+            Console.WriteLine(" FizzBuzz");
+        }
+        private void print()
+        {
+            List.print();
+        }
+
     }
 }

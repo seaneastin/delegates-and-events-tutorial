@@ -9,11 +9,28 @@ namespace delegates_and_events_tutorial
     class ArrayList
     {
         private object[] _list;
-        int[] array;
 
         public ArrayList()
         {
             _list = new object[0];
+        }
+
+        public virtual int remove(int index)
+        {
+            object[] newList = new object[_list.Length - 1];
+            int newPosition = 0;
+            for (int i = 0; i < _list.Length; i++)
+            {
+                if (i != index)
+                {
+                    newList[newPosition] = _list[i];
+                newPosition++;
+                }
+                
+            }
+            _list = newList;
+            int j = 0;
+            return j;
         }
 
         public virtual int Add(object value)
@@ -44,6 +61,21 @@ namespace delegates_and_events_tutorial
             get
             {
                 return _list[index];
+            }
+        }
+        public void print()
+        {
+            foreach(object i in _list)
+            {
+                Console.Write(i + " ");
+            }
+            Console.WriteLine();
+        }
+        public int Length
+        {
+            get
+            {
+                return _list.Length;
             }
         }
 
